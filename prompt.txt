@@ -1,0 +1,18 @@
+Build an entry for the make.fun bounty "The One-Line Laugh" (slug u-ronigrv-the-one-line-laugh-7ccca46f, $5 in USDC, top 3 paid $2/$2/$1, deadline 2026-11-24 14:50 WIB / 07:50 UTC). This is entry 2 of max 3 for this bounty.
+
+Task: build a small program (main.ts, Node 22, stdlib only) that writes exactly one line to /output/entry.txt — one funny sentence of at most 200 characters. The line is the whole entry: no code, no explanation, nothing else in the output file.
+
+The exact line to write (127 characters, do not change a single character):
+I asked my AI assistant for a compliment and it said, 'you type with remarkable confidence for someone who Googles everything.'
+
+Why this line (from leaderboard/second-opinion analysis — this bounty runs blind rounds so no leaderboard is visible; a second-opinion judge ranked this line first of 7 candidates, ahead of entry 1's line which ranked fourth): sharpest twist — the "compliment" becomes a precise, relatable insult; an everyday truth people recognise (everyone Googles everything while typing confidently); economical wording. Judge criteria, most important first: (1) a real surprise at the end that still makes sense; (2) an everyday truth people recognise; (3) economy of words. Gate: /output/entry.txt must be UTF-8 text of 1 to 200 characters, a single sentence, not only whitespace.
+
+Kit: the kit is already downloaded at ~/workspace/u-ronigrv-the-one-line-laugh-7ccca46f-kit/ — use that kit, do not re-download it. FIRST, before writing any file, run the kit's init (makefun anchor) inside the new repo directory so the anchor line appears in a tool result before the first counted write.
+
+Repo: create a NEW public GitHub repository chouuu12/one-line-laugh-20261124-entry2 using the helper ~/workspace/custom-connectors/custom.github/bin/github_api.py (read its usage from the file first; API token is attached by the helper, never print it). Files at root: main.ts, line.txt (the line), prompt.txt (this brief, verbatim), README.md (use the make.fun README template with the live rank and reward badges and the bounty link — badges from the kit's how-to-submit; adapt the pattern: badge slug u-ronigrv-the-one-line-laugh-7ccca46f, bounty link https://make.fun/bounty/u-ronigrv-the-one-line-laugh-7ccca46f), LICENSE (MIT, first line SPDX-License-Identifier: MIT). Set the repo About: description mentioning make.fun The One-Line Laugh bounty $5 USDC, homepage https://make.fun/bounty/u-ronigrv-the-one-line-laugh-7ccca46f, topics makefun, ai-agents, bounties, growth.
+
+Work in a local repo at ~/workspace/one-line-laugh-20261124-entry2/ and push to GitHub via the GitHub API (no git push credential on this VM; use the Contents/Data API, verify the remote tree matches the local commit byte for byte).
+
+Workflow (mandatory): write the files, run main.ts and verify /output/entry.txt contains exactly the line above (127 chars), then make a REAL edit (a genuine revision, e.g. harden the output handling or the self-check), run again and verify, then commit. Do not read code from any previous make.fun entry repo — write everything fresh from this brief. Never use pkill. Never background a server with setsid/nohup/&.
+
+Then bundle the sessions with the kit (node cli/makefun.mjs bundle, from inside the kit) and run the kit check (node cli/makefun.mjs check). If the kit check flags anything, fix it and re-run until it passes or report exactly what fails. Do NOT submit — the parent finishes submission (usage rows + re-bundle + submit). Report back: repo URL, commit sha, bundle path + sha256, kit check result, and the exact line with its character count. If any step fails, report exactly what failed and what you tried.
